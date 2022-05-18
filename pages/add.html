@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<br>
+<h4>Add a person to the list</h4>
+<br>
+
+<div class="container">
+	
+	<form ng-submit= "add()" class="form-control">
+		
+		<div class="mb-3">
+		  <label class="form-label">Enter name:</label>
+		  <input type="text" class="form-control" placeholder="Person name" ng-model= "newPerson.name" required />
+		</div>
+
+		<div class="mb-3">
+		  <label class="form-label">Enter surname:</label>
+		  <input type="text" class="form-control" placeholder="Person surname" ng-model= "newPerson.surname" required />
+		</div>
+		
+		<div class="mb-3">
+		  <label class="form-label">Enter age:</label>
+		  <input type="text" class="form-control" placeholder="Person age" ng-model= "newPerson.age" required />
+		</div>
+
+		<div class="mb-3">
+		  <label class="form-label">Enter occupation:</label>
+		  <input type="text" class="form-control" placeholder="Person occupation" ng-model= "newPerson.occupation" required />
+		</div>
+		
+		<input type="submit" class="btn btn-primary" value="Add">
+		
+	</form>
+	
+</div>

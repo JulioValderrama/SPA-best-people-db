@@ -1,0 +1,42 @@
+<br><br>
+
+<style>
+	h2
+	{
+	   text-align: center;
+	}
+</style>
+
+<div class="container">
+	<h2 class="text-align-center">Data Base</h2>
+	<br>
+	<label>Search: <input ng-model="searchText"></label>
+	<br>
+	<br>
+	<table class="table table-hover table-bordered">
+
+		<thead class="thead-dark">
+		  <tr>
+			<th scope="col">Id</th>
+			<th scope="col">Name</th>
+			<th scope="col">Surname</th>
+			<th scope="col">Age</th>
+			<th scope="col">Occupation</th>
+		  </tr>
+		</thead>
+
+		<tbody>
+			<tr ng-repeat= "person in people | filter: searchText "> 
+				<td> <input type="button" value={{person.id}} ng-click="getDetails($index)">  </td>
+				<td> {{person.name}} </td>
+				<td> {{person.surname}} </td>
+				<td> {{person.age}} </td>
+				<td> {{person.occupation}} </td>
+			</tr>
+		</tbody>
+
+	</table>
+
+</div>
+
+

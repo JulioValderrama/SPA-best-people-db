@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<br>
+<h4>Select the person to edit</h4>
+<br>
+
+<div class="container">
+	
+	<select class="form-select" aria-label="Default select example" ng-model="id">
+		
+	  <option ng-repeat="person in people" value="{{person.id}}" > Id: {{person.id}}, Name: {{person.name}} </option>
+
+	</select>
+	
+	<br>
+
+	<form ng-submit= "edit()" class="form-control">
+		
+		<div class="mb-3">
+		  <label class="form-label">Enter name:</label>
+		  <input type="text" class="form-control" placeholder="{{people[id-1].name}}" ng-model= "personToEdit.name" ng-change="nameEdited=true" ng-required="nameEdited === true">
+		</div>
+
+		<div class="mb-3">
+		  <label class="form-label">Enter surname:</label>
+		  <input type="text" class="form-control" placeholder="{{people[id-1].surname}}" ng-model= "personToEdit.surname" ng-change="surnameEdited=true" ng-required="surnameEdited === true">
+		</div>
+		
+		<div class="mb-3">
+		  <label class="form-label">Enter age:</label>
+		  <input type="text" class="form-control" placeholder="{{people[id-1].age}}" ng-model= "personToEdit.age" ng-change="ageEdited=true" ng-required="ageEdited === true">
+		</div>
+
+		<div class="mb-3">
+		  <label class="form-label">Enter occupation:</label>
+		  <input type="text" class="form-control" placeholder="{{people[id-1].occupation}}" ng-model= "personToEdit.occupation" ng-change="occupationEdited=true" ng-required="occupationEdited === true">
+		</div>
+		
+		<input type="submit" class="btn btn-primary" value="Edit">
+		
+	</form>
+
+
+</div>
