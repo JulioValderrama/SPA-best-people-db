@@ -7,6 +7,7 @@ var myApp = angular.module("myApp", ['ngRoute']);
 //Doing more changes in TEST from local
 // ------------------------------ROUTES------------------------------
 
+
 myApp.config(['$routeProvider', function($routeProvider) {
 	
 	$routeProvider
